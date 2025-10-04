@@ -22,7 +22,11 @@ public class SecondActivity extends AppCompatActivity{
     Button scissors;
     Button restart;
     TextView welcome;
+    TextView currentPlayerPlay;
     TextView currentComputerPlay;
+    TextView roundWinner;
+    TextView userScore;
+    int score;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,9 +49,12 @@ public class SecondActivity extends AppCompatActivity{
         welcome = findViewById(R.id.goodluck_tv);
         welcome.setText("Welcome " + val1 + ", Good Luck!");
 
-        TextView currentPlayerPlay = findViewById(R.id.current_player_play);
-
+        currentPlayerPlay = findViewById(R.id.current_player_play);
         currentComputerPlay = findViewById(R.id.current_computer_play);
+
+        roundWinner = findViewById(R.id.round_winner);
+
+        userScore = findViewById(R.id.user_score);
 
         rock = findViewById(R.id.rock_button);
         paper = findViewById(R.id.paper_button);
@@ -59,15 +66,21 @@ public class SecondActivity extends AppCompatActivity{
                 currentPlayerPlay.setText("\uD83E\uDEA8");
                 computerPlay();
 
-                if (currentComputerPlay.equals(currentPlayerPlay)){
-                    "draw"
+                if (currentComputerPlay.equals(currentPlayerPlay)){ //change this line using the
+                    // actual value instead of comparing computer and player
+                    roundWinner.setText("Draw");
                 }
                 else if (currentComputerPlay.equals("\uD83D\uDCC4")){
-                    computer wins;
+                    roundWinner.setText("Computer Wins");
+                    score = 0;
+                    userScore.setText("Your score: " + score);
                 }
-                else {
-                    player wins;
+                else { //change else to else if
+                    roundWinner.setText("Player Wins");
+                    score++;
+                    userScore.setText("Your score: " + score);
                 }
+                roundWinner.setText("");
             }
         });
 
@@ -77,14 +90,19 @@ public class SecondActivity extends AppCompatActivity{
                 currentPlayerPlay.setText("\uD83D\uDCC4");
                 computerPlay();
 
-                if (currentComputerPlay.equals(currentPlayerPlay)){
-                    "draw"
+                if (currentComputerPlay.equals(currentPlayerPlay)){ //change this line using the
+                    // actual value instead of comparing computer and player
+                    roundWinner.setText("Draw");
                 }
-                else if (currentComputerPlay.equals("")){
-                    "player wins;
+                else if (currentComputerPlay.equals("\uD83E\uDEA8")){
+                    roundWinner.setText("Player Wins");
+                    score++;
+                    userScore.setText("Your score: " + score);
                 }
-                else {
-                    computer wins
+                else { //change else to else if
+                    roundWinner.setText("Computer Wins");
+                    score = 0;
+                    userScore.setText("Your score: " + score);
                 }
             }
         });
@@ -95,14 +113,19 @@ public class SecondActivity extends AppCompatActivity{
                 currentPlayerPlay.setText("✂\uFE0F");
                 computerPlay();
 
-                if (currentComputerPlay.equals(currentPlayerPlay)){
-                    "draw"
+                if (currentComputerPlay.equals(currentPlayerPlay)){ //change this line using the
+                    // actual value instead of comparing computer and player
+                    roundWinner.setText("Draw");
                 }
-                else if (currentComputerPlay.equals("")){
-
+                else if (currentComputerPlay.equals("\uD83E\uDEA8")){
+                    roundWinner.setText("Player Wins");
+                    score++;
+                    userScore.setText("Your score: " + score);
                 }
-                else {
-
+                else { //change else to else if
+                    roundWinner.setText("Computer Wins");
+                    score = 0;
+                    userScore.setText("Your score: " + score);
                 }
             }
         });
@@ -113,7 +136,8 @@ public class SecondActivity extends AppCompatActivity{
             public void onClick(View v) {
                 currentPlayerPlay.setText("");
                 currentComputerPlay.setText("");
-                //set score to 0 later on
+                score = 0;
+                userScore.setText("Your score: " + score);
             }
         });
     }
