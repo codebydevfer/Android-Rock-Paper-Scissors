@@ -20,6 +20,7 @@ public class SecondActivity extends AppCompatActivity{
     Button rock;
     Button paper;
     Button scissors;
+    Button restart;
     TextView welcome;
     TextView currentComputerPlay;
 
@@ -55,37 +56,76 @@ public class SecondActivity extends AppCompatActivity{
         rock.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                currentPlayerPlay.setText("Rock");
+                currentPlayerPlay.setText("\uD83E\uDEA8");
                 computerPlay();
-                //validate who wins
+
+                if (currentComputerPlay.equals(currentPlayerPlay)){
+                    "draw"
+                }
+                else if (currentComputerPlay.equals("\uD83D\uDCC4")){
+                    computer wins;
+                }
+                else {
+                    player wins;
+                }
             }
         });
 
         paper.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                currentPlayerPlay.setText("Paper");
+                currentPlayerPlay.setText("\uD83D\uDCC4");
                 computerPlay();
+
+                if (currentComputerPlay.equals(currentPlayerPlay)){
+                    "draw"
+                }
+                else if (currentComputerPlay.equals("")){
+                    "player wins;
+                }
+                else {
+                    computer wins
+                }
             }
         });
 
         scissors.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                currentPlayerPlay.setText("Scissors");
+                currentPlayerPlay.setText("✂\uFE0F");
                 computerPlay();
+
+                if (currentComputerPlay.equals(currentPlayerPlay)){
+                    "draw"
+                }
+                else if (currentComputerPlay.equals("")){
+
+                }
+                else {
+
+                }
+            }
+        });
+
+        restart = findViewById(R.id.restart_button);
+        restart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                currentPlayerPlay.setText("");
+                currentComputerPlay.setText("");
+                //set score to 0 later on
             }
         });
     }
     public void computerPlay() {
         double randomValue = Math.random();
 
-        if (randomValue <= 0.33) {
-            currentComputerPlay.setText("Rock");
-        } else if (randomValue <= 0.66) {
-            currentComputerPlay.setText("Paper");
+        if (randomValue < 0.34) {
+            currentComputerPlay.setText("\uD83E\uDEA8");
+        } else if (randomValue <= 0.67) {
+            currentComputerPlay.setText("\uD83D\uDCC4");
         } else {
-            currentComputerPlay.setText("Scissors");
+            currentComputerPlay.setText("✂\uFE0F");
         }
     }
 }
