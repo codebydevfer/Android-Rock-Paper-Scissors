@@ -57,6 +57,7 @@ public class SecondActivity extends AppCompatActivity{
             public void onClick(View v) {
                 currentPlayerPlay.setText("Rock");
                 computerPlay();
+                //validate who wins
             }
         });
 
