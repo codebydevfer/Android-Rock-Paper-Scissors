@@ -14,8 +14,8 @@
 .cxx
 local.properties
 
+# Ignore gradle-specific files
 build.gradle.kts
 gradle.properties
-.gradle
 gradlew.bat
 settings.gradle.kts
