@@ -28,6 +28,11 @@ public class SecondActivity extends AppCompatActivity{
     TextView userScore;
     int score;
 
+    //Emojis
+    //Rock: \uD83E\uDEA8
+    //Paper: \uD83D\uDCC3
+    //Scissors: \u2702\uFE0F
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,40 +71,38 @@ public class SecondActivity extends AppCompatActivity{
                 currentPlayerPlay.setText("\uD83E\uDEA8");
                 computerPlay();
 
-                if (currentComputerPlay.equals(currentPlayerPlay)){ //change this line using the
-                    // actual value instead of comparing computer and player
+                if (currentComputerPlay.getText().equals("\uD83E\uDEA8")){
                     roundWinner.setText("Draw");
                 }
-                else if (currentComputerPlay.equals("\uD83D\uDCC4")){
+                else if (currentComputerPlay.getText().equals("\uD83D\uDCC3")){
                     roundWinner.setText("Computer Wins");
                     score = 0;
                     userScore.setText("Your score: " + score);
                 }
-                else { //change else to else if
+                else if (currentComputerPlay.getText().equals("\u2702\uFE0F")){
                     roundWinner.setText("Player Wins");
                     score++;
                     userScore.setText("Your score: " + score);
                 }
-                roundWinner.setText("");
+//                roundWinner.setText("");
             }
         });
 
         paper.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                currentPlayerPlay.setText("\uD83D\uDCC4");
+                currentPlayerPlay.setText("\uD83D\uDCC3");
                 computerPlay();
 
-                if (currentComputerPlay.equals(currentPlayerPlay)){ //change this line using the
-                    // actual value instead of comparing computer and player
+                if (currentComputerPlay.getText().equals("\uD83D\uDCC3")){
                     roundWinner.setText("Draw");
                 }
-                else if (currentComputerPlay.equals("\uD83E\uDEA8")){
+                else if (currentComputerPlay.getText().equals("\uD83E\uDEA8")){
                     roundWinner.setText("Player Wins");
                     score++;
                     userScore.setText("Your score: " + score);
                 }
-                else { //change else to else if
+                else if (currentComputerPlay.getText().equals("\u2702\uFE0F")){
                     roundWinner.setText("Computer Wins");
                     score = 0;
                     userScore.setText("Your score: " + score);
@@ -110,19 +113,18 @@ public class SecondActivity extends AppCompatActivity{
         scissors.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                currentPlayerPlay.setText("✂\uFE0F");
+                currentPlayerPlay.setText("\u2702\uFE0F");
                 computerPlay();
 
-                if (currentComputerPlay.equals(currentPlayerPlay)){ //change this line using the
-                    // actual value instead of comparing computer and player
+                if (currentComputerPlay.getText().equals("SCISSORS")){
                     roundWinner.setText("Draw");
                 }
-                else if (currentComputerPlay.equals("\uD83E\uDEA8")){
+                else if (currentComputerPlay.getText().equals("\uD83D\uDCC3")){
                     roundWinner.setText("Player Wins");
                     score++;
                     userScore.setText("Your score: " + score);
                 }
-                else { //change else to else if
+                else if (currentComputerPlay.getText().equals("\uD83E\uDEA8")){
                     roundWinner.setText("Computer Wins");
                     score = 0;
                     userScore.setText("Your score: " + score);
@@ -147,9 +149,9 @@ public class SecondActivity extends AppCompatActivity{
         if (randomValue < 0.34) {
             currentComputerPlay.setText("\uD83E\uDEA8");
         } else if (randomValue <= 0.67) {
-            currentComputerPlay.setText("\uD83D\uDCC4");
+            currentComputerPlay.setText("\uD83D\uDCC3");
         } else {
-            currentComputerPlay.setText("✂\uFE0F");
+            currentComputerPlay.setText("\u2702\uFE0F");
         }
     }
 }
