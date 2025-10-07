@@ -15,14 +15,16 @@
         android:fontFamily="sans-serif"
         android:lineSpacingExtra="12sp"
         android:text="Welcome to Rock, Paper, Scissors!"
+        android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="#fff"
-        android:textSize="20sp"
+        android:textSize="35sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.218" />
+        app:layout_constraintVertical_bias="0.098" />
 
     <EditText
         android:id="@+id/username_input"
@@ -31,20 +33,23 @@
         android:ems="10"
         android:hint="Please Enter your Name"
         android:inputType="text"
-        android:textSize="15sp"
+        android:textAlignment="center"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.478" />
 
     <Button
         android:id="@+id/wml_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#69F451"
+        android:backgroundTint="#45E62F"
         android:text="Wish Me Luck"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
