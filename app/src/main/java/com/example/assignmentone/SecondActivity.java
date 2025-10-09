@@ -98,11 +98,11 @@ public class SecondActivity extends AppCompatActivity{
 
                 if (currentComputerPlay.getText().equals("\uD83E\uDEA8")){
                     roundWinner.setText("Draw");
-                    shareObj.putExtra(Intent.EXTRA_TEXT, "Check out my score: " + score);
+                    shareObj.putExtra(Intent.EXTRA_TEXT, val1 + "'s score is: " + score);
                 }
                 else if (currentComputerPlay.getText().equals("\uD83D\uDCC3")){
                     roundWinner.setText("Computer Wins");
-                    shareObj.putExtra(Intent.EXTRA_TEXT, "Check out my score: " + score);
+                    shareObj.putExtra(Intent.EXTRA_TEXT, val1 + "'s score is: " + score);
                     score = 0;
                     userScore.setText("Your score: " + score);
                     userLost.setText("You Lose!");
@@ -110,7 +110,7 @@ public class SecondActivity extends AppCompatActivity{
                 else if (currentComputerPlay.getText().equals("\u2702\uFE0F")){
                     roundWinner.setText("Player Wins");
                     score++;
-                    shareObj.putExtra(Intent.EXTRA_TEXT, "Check out my score: " + score);
+                    shareObj.putExtra(Intent.EXTRA_TEXT, val1 + "'s score is: " + score);
                     userScore.setText("Your score: " + score);
                 }
             }
@@ -124,17 +124,17 @@ public class SecondActivity extends AppCompatActivity{
 
                 if (currentComputerPlay.getText().equals("\uD83D\uDCC3")){
                     roundWinner.setText("Draw");
-                    shareObj.putExtra(Intent.EXTRA_TEXT, "Check out my score: " + score);
+                    shareObj.putExtra(Intent.EXTRA_TEXT, val1 + "'s score is: " + score);
                 }
                 else if (currentComputerPlay.getText().equals("\uD83E\uDEA8")){
                     roundWinner.setText("Player Wins");
                     score++;
-                    shareObj.putExtra(Intent.EXTRA_TEXT, "Check out my score: " + score);
+                    shareObj.putExtra(Intent.EXTRA_TEXT, val1 + "'s score is: " + score);
                     userScore.setText("Your score: " + score);
                 }
                 else if (currentComputerPlay.getText().equals("\u2702\uFE0F")){
                     roundWinner.setText("Computer Wins");
-                    shareObj.putExtra(Intent.EXTRA_TEXT, "Check out my score: " + score);
+                    shareObj.putExtra(Intent.EXTRA_TEXT, val1 + "'s score is: " + score);
                     score = 0;
                     userScore.setText("Your score: " + score);
                     userLost.setText("You Lose!");
@@ -150,17 +150,17 @@ public class SecondActivity extends AppCompatActivity{
 
                 if (currentComputerPlay.getText().equals("SCISSORS")){
                     roundWinner.setText("Draw");
-                    shareObj.putExtra(Intent.EXTRA_TEXT, "Check out my score: " + score);
+                    shareObj.putExtra(Intent.EXTRA_TEXT, val1 + "'s score is: " + score);
                 }
                 else if (currentComputerPlay.getText().equals("\uD83D\uDCC3")){
                     roundWinner.setText("Player Wins");
                     score++;
-                    shareObj.putExtra(Intent.EXTRA_TEXT, "Check out my score: " + score);
+                    shareObj.putExtra(Intent.EXTRA_TEXT, val1 + "'s score is: " + score);
                     userScore.setText("Your score: " + score);
                 }
                 else if (currentComputerPlay.getText().equals("\uD83E\uDEA8")){
                     roundWinner.setText("Computer Wins");
-                    shareObj.putExtra(Intent.EXTRA_TEXT, "Check out my score: " + score);
+                    shareObj.putExtra(Intent.EXTRA_TEXT, val1 + "'s score is: " + score);
                     score = 0;
                     userScore.setText("Your score: " + score);
                     userLost.setText("You Lose!");
